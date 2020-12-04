@@ -1,0 +1,43 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: yangyang.liu
+ * @Date: 2020-12-03 17:13:06
+ * @LastEditors: yangyang.liu
+ * @LastEditTime: 2020-12-03 17:22:27
+-->
+<!-- 每个 Vue 应用都需要通过实例化 Vue 来实现。
+语法格式如下：
+var vm = new Vue({}) 
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Vue 测试实例</title>
+	<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+	<div id="vue_det">
+		<h1>site : {{site}}</h1>
+		<h1>url : {{url}}</h1>
+		<!-- 此处调用了定义的方法 -->
+		<h1>{{details()}}</h1> 
+	</div>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#vue_det', //el属性为元素的id
+			data: { //data用于定义属性
+				site: "显示内容1",
+				url: "显示内容2",
+				alexa: "显示内容3"
+			},
+			methods: { //用于定义函数方法
+				details: function() {
+					return  "site的内容"+this.site;
+				}
+			}
+		})
+	</script>
+</body>
+</html>

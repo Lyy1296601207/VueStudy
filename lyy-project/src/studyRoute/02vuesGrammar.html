@@ -1,0 +1,45 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: yangyang.liu
+ * @Date: 2020-12-03 17:26:34
+ * @LastEditors: yangyang.liu
+ * @LastEditTime: 2020-12-04 10:16:35
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="text">
+    <!-- 使用{{ }}文本插值 -->
+  <p>{{ message }}</p>
+</div>
+
+<div id="html">
+    <!-- 使用v-html输出html代码 -->
+  <div v-html="html"></div>
+</div>
+
+
+<script>
+new Vue({
+  el: '#text',
+  data: {
+    message: 'Hello Vue.js!'
+  }
+}),
+new Vue({
+    el:"#html",
+    data:{
+      html: '<p>这是一段html元素</p>'
+    }
+})
+</script>
+</body>
+
+</html>
